@@ -1,0 +1,268 @@
+$strongCyan: hsl(172, 67%, 45%);
+$darkCyan: hsl(183, 100%, 15%);
+$darkgrayCyan: hsl(186, 14%, 43%);
+$darkgrayCyan2: hsl(184, 14%, 56%);
+$lightGrayCyan: hsl(185, 41%, 84%);
+$lightGrayCyan2: hsl(189, 41%, 97%);
+$whiteColor: hsl(0, 0%, 100%);
+$fontStake: 24px;
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: serif;
+    font-size: $fontStake;
+    font-weight: 400;
+}
+
+body{
+    background-color: $lightGrayCyan;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3{
+    font-size: 16px;
+    color: $darkCyan;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+input{
+    width: 100%;
+    text-align: right;
+    padding: 5px;
+    font-size: $fontStake;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    background: $lightGrayCyan2;
+    color: $darkCyan;
+    border-radius: 5px;
+    
+    &:hover{
+        border: 3px solid $strongCyan;
+    }
+}
+
+img{
+    position: absolute;
+    top: 25%;
+    margin-left: 10px;
+}
+
+.time_spliter{
+
+    h1{
+        margin-bottom: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: $fontStake;
+        line-height: 1.6;
+    }
+    
+
+}
+.container{
+    width: 760px;
+    max-width: 100%;
+    background: $whiteColor;
+    border-radius: 10px;
+    padding: 40px 30px;
+    display: flex;
+    gap: 30px;
+
+    .tips_entry{
+        width: 50%;
+    }
+    .tips_calculator{
+        width: 50%;
+        background-color: $darkCyan;
+        padding: 40px;
+        border-radius: 5px;
+    }
+}
+
+.display_tips{
+    margin-bottom: 40px;
+}
+
+.values,
+.input_number{
+    position: relative;
+}
+
+.percentages{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 45px;
+    grid-gap: 10px;
+
+    .perct{
+        width: 100px;
+        max-width: 100%;
+        background-color: $darkCyan;
+        border-radius: 5px;
+        cursor: pointer;
+
+        p{
+            text-align: center;
+            padding: 10px;
+            color: $whiteColor;
+            font-weight: 700;
+        }
+
+        &:hover{
+            background-color: $lightGrayCyan;
+            
+            p:hover{
+                color: $darkCyan;
+            }
+        }
+    }
+
+
+    #customize{
+        
+        input{
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            background-color: $lightGrayCyan2;
+            font-size: 20px;
+            text-align: right;
+            color: $darkCyan;
+
+            &:hover{
+                border: 3px solid $strongCyan;
+            }
+        }
+    }
+}
+
+.tips_percentages{
+    margin-bottom: 40px;
+
+    h3{
+        margin-bottom: 20px;
+    }
+}
+
+.total_persons{
+
+    .person_header{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .error_message{
+        color: rgb(199, 6, 6);
+        display: inline-block;
+        visibility: hidden;
+    }
+
+}
+
+.tip_amount{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .header{
+        margin-bottom: 10px;
+
+        h4{
+            color: $lightGrayCyan2;
+            font-size: 15px;
+        }
+
+        small{
+            color: $darkgrayCyan;
+        }
+
+    
+    }
+
+    #amount,
+    #total_value{
+        color: $strongCyan;
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    
+}
+
+.amount_container{
+    margin-bottom: 100px;
+}
+
+.reset{
+    width: 100%;
+    background-color: hsl(185, 83%, 24%);
+    border-radius: 5px;
+
+    button {
+        padding: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $darkCyan;
+        background-color: inherit;
+        border: none;
+        font-weight: 700;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $lightGrayCyan;
+        }
+    }
+
+    .reset_btn{
+        width: 100%;
+    }
+
+}
+
+.perct.completed{
+    background: $strongCyan;
+    
+    p{
+        color: $darkCyan;
+    }
+}
+
+.reset.completed{
+    background: $strongCyan;
+}
+
+
+@media screen and (max-width: 654px) {
+    .container{
+        flex-direction: column;
+
+        .tips_entry{
+            width: 100%;
+        }
+
+        .tips_calculator{
+            width: 100%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 374px) {
+    .percentages{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

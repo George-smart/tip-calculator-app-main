@@ -1,0 +1,265 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+body {
+  background-color: #c5e4e7;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+h3 {
+  font-size: 16px;
+  color: #00494d;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  text-align: right;
+  padding: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  background: #f4fafa;
+  color: #00494d;
+  border-radius: 5px;
+}
+
+input:hover {
+  border: 3px solid #26c0ab;
+}
+
+img {
+  position: absolute;
+  top: 25%;
+  margin-left: 10px;
+}
+
+.time_spliter h1 {
+  margin-bottom: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 1.6;
+}
+
+.container {
+  width: 760px;
+  max-width: 100%;
+  background: white;
+  border-radius: 10px;
+  padding: 40px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.container .tips_entry {
+  width: 50%;
+}
+
+.container .tips_calculator {
+  width: 50%;
+  background-color: #00494d;
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.display_tips {
+  margin-bottom: 40px;
+}
+
+.values,
+.input_number {
+  position: relative;
+}
+
+.percentages {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 45px;
+  grid-gap: 10px;
+}
+
+.percentages .perct {
+  width: 100px;
+  max-width: 100%;
+  background-color: #00494d;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.percentages .perct p {
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-weight: 700;
+}
+
+.percentages .perct:hover {
+  background-color: #c5e4e7;
+}
+
+.percentages .perct:hover p:hover {
+  color: #00494d;
+}
+
+.percentages #customize input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: #f4fafa;
+  font-size: 20px;
+  text-align: right;
+  color: #00494d;
+}
+
+.percentages #customize input:hover {
+  border: 3px solid #26c0ab;
+}
+
+.tips_percentages {
+  margin-bottom: 40px;
+}
+
+.tips_percentages h3 {
+  margin-bottom: 20px;
+}
+
+.total_persons .person_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.total_persons .error_message {
+  color: #c70606;
+  display: inline-block;
+  visibility: hidden;
+}
+
+.tip_amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tip_amount .header {
+  margin-bottom: 10px;
+}
+
+.tip_amount .header h4 {
+  color: #f4fafa;
+  font-size: 15px;
+}
+
+.tip_amount .header small {
+  color: #5e7a7d;
+}
+
+.tip_amount #amount,
+.tip_amount #total_value {
+  color: #26c0ab;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.amount_container {
+  margin-bottom: 100px;
+}
+
+.reset {
+  width: 100%;
+  background-color: #0a6870;
+  border-radius: 5px;
+}
+
+.reset button {
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #00494d;
+  background-color: inherit;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.reset button:hover {
+  background-color: #c5e4e7;
+}
+
+.reset .reset_btn {
+  width: 100%;
+}
+
+.perct.completed {
+  background: #26c0ab;
+}
+
+.perct.completed p {
+  color: #00494d;
+}
+
+.reset.completed {
+  background: #26c0ab;
+}
+
+@media screen and (max-width: 654px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .tips_entry {
+    width: 100%;
+  }
+  .container .tips_calculator {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .percentages {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}

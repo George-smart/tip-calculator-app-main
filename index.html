@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="scss/styles.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <script defer src="js/app.js"></script>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="time_spliter">
+    <h1>split <br> Titer</h1>
+  </div>
+
+  <div class="container">
+    <div class="tips_entry">
+      <div class="display_tips">
+        <h3>Bill</h3>
+        <div class="values">
+          <img src="./images/icon-dollar.svg">
+          <input type="number" id="bill_value" placeholder="0">
+        </div>     
+      </div>
+
+      <div class="tips_percentages">
+        <h3>Select Tip %</h3>
+        <div class="percentages">
+          <div class="perct">
+            <p class="perct_value">5%</p>
+          </div>
+          <div class="perct">
+            <p class="perct_value">10%</p>
+          </div>
+          <div class="perct">
+            <p class="perct_value">15%</p>
+          </div>
+          <div class="perct">
+            <p class="perct_value">25%</p>
+          </div>
+          <div class="perct">
+            <p class="perct_value">50%</p>
+          </div>
+          <div class="perct" id="customize">
+            <input type="number" name="number" id="custom_value" placeholder="Custom">
+          </div>
+        </div>
+      </div>
+      
+      <div class="total_persons">
+        <div class="person_header">
+          <h3>Number of People</h3>
+          <small class="error_message">Can't be zero</small>
+        </div>
+        <div class="input_number">
+          <img src="./images/icon-person.svg">
+          <input type="number" name="persons" id="persons" placeholder="0"> 
+        </div>
+      </div>
+    </div>
+    <div class="tips_calculator">
+      <div class="amount_container">
+        <div class="tip_amount">
+          <div class="header">
+            <h4>Tip Amount</h4>
+            <small>/ person</small>
+          </div>
+          <div class="amount">
+            <p id="amount">$0.00</p>
+          </div>
+        </div>
+        <div class="tip_amount">
+          <div class="header">
+            <h4>Total</h4>
+            <small>/ person</small>
+          </div>
+          <div class="amount">
+            <p id="total_value">$0.00</p>
+          </div>
+        </div>
+      </div>  
+      <div class="reset">
+        <button class="reset_btn">Reset</button>
+      </div>
+    </div>
+  </div>
+
+<!-- 
+
+
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
